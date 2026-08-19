@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI ANALYTICS SERVICE
+LANGUAGE LEARNING PAL ANALYTICS SERVICE
 Version: 2.0
 
 Purpose:

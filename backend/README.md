@@ -1,5 +1,5 @@
 ---
-title: Lingolift Ai Backend
+title: Language Learning Pal Backend
 emoji: 🔥
 colorFrom: green
 colorTo: yellow

@@ -9,53 +9,53 @@ const LearningAnalytics = ({ data, hasProfile }) => {
       label: 'Progress',
       value: hasProfile ? `${data.progress}%` : '0%',
       icon: TrendingUp,
-      color: '#0071e3',
-      bg: '#e1f5fe'
+      color: '#38bdf8',
+      bg: 'rgba(56, 189, 248, 0.15)'
     },
     {
       label: 'Vocabulary',
       value: hasProfile ? data.vocabulary_learned : '0',
       icon: Book,
-      color: '#af52de',
-      bg: '#f3e5f5'
+      color: '#c084fc',
+      bg: 'rgba(192, 132, 252, 0.15)'
     },
     {
       label: 'Grammar',
       value: hasProfile ? data.grammar_exercises : '0',
       icon: SpellCheck,
-      color: '#ff3b30',
-      bg: '#ffebee'
+      color: '#f87171',
+      bg: 'rgba(248, 113, 113, 0.15)'
     },
     {
       label: 'Completed',
       value: hasProfile ? data.days_completed : '0',
       icon: CheckCircle,
-      color: '#34c759',
-      bg: '#e8f5e9'
+      color: '#34d399',
+      bg: 'rgba(52, 211, 153, 0.15)'
     },
     {
       label: 'Streak',
       value: hasProfile ? data.current_streak : '0',
       icon: Zap,
-      color: '#ff9500',
-      bg: '#fff3e0'
+      color: '#fbbf24',
+      bg: 'rgba(251, 191, 36, 0.15)'
     },
   ];
 
   return (
     <div className="dashboard-card">
-      <div className="card-title">
-        <TrendingUp size={14} /> Learning Analytics
+      <div className="card-title" style={{ color: '#818cf8' }}>
+        <TrendingUp size={16} /> Learning Analytics
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(80px, 1fr))', gap: '0.75rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(85px, 1fr))', gap: '0.75rem' }}>
         {metrics.map((metric, idx) => (
-          <div key={idx} className="metric-card" style={{ padding: '0.75rem', display: 'flex', flexDirection: 'column', alignItems: 'center', background: '#f5f5f7', borderRadius: '12px' }}>
-            <div style={{ background: metric.bg, padding: '0.4rem', borderRadius: '50%', marginBottom: '0.5rem' }}>
-              <metric.icon size={14} style={{ color: metric.color }} />
+          <div key={idx} className="metric-card" style={{ padding: '0.85rem 0.6rem', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'rgba(30, 41, 59, 0.5)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '14px' }}>
+            <div style={{ background: metric.bg, padding: '0.45rem', borderRadius: '50%', marginBottom: '0.5rem' }}>
+              <metric.icon size={16} style={{ color: metric.color }} />
             </div>
-            <div style={{ fontSize: '1rem', fontWeight: 800, color: '#1d1d1f' }}>{metric.value}</div>
-            <div style={{ fontSize: '0.6rem', color: '#86868b', fontWeight: 700, textTransform: 'uppercase', marginTop: '0.1rem' }}>{metric.label}</div>
+            <div style={{ fontSize: '1.15rem', fontWeight: 800, color: '#ffffff' }}>{metric.value}</div>
+            <div style={{ fontSize: '0.65rem', color: '#94a3b8', fontWeight: 700, textTransform: 'uppercase', marginTop: '0.15rem', letterSpacing: '0.04em' }}>{metric.label}</div>
           </div>
         ))}
       </div>

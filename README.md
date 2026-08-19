@@ -1,6 +1,6 @@
-# LingoLift AI – Language Learning Agent
+# Language learning pal – Language Learning Agent
 
-LingoLift AI is an AI-powered Language Learning Agent designed to help users improve English in a structured and personalized way. Unlike traditional static chatbots, LingoLift functions as a true AI assistant by integrating state memory, automated planning roadmaps, tool-assisted execution, and dynamic progress trackers.
+LLP  is an AI-powered Language Learning Agent designed to help users improve English in a structured and personalized way. Unlike traditional static chatbots, LLP functions as a true AI assistant by integrating state memory, automated planning roadmaps, tool-assisted execution, and dynamic progress trackers.
 
 ---
 
@@ -88,9 +88,9 @@ graph TD
 
 ## 🤖 What Makes It an AI Agent?
 
-Unlike a traditional question-and-answer chatbot, LingoLift possesses capabilities that define an autonomous learning agent:
+Unlike a traditional question-and-answer chatbot, LLP possesses capabilities that define an autonomous learning agent:
 
-| Capability Feature | Traditional Chatbot | LingoLift AI Agent |
+| Capability Feature | Traditional Chatbot | LLP AI Agent |
 | :--- | :---: | :---: |
 | **Maintains User Memory** | ❌ No | ✅ Yes |
 | **Creates Personalized Learning Plans** | ❌ No | ✅ Yes |
@@ -99,7 +99,7 @@ Unlike a traditional question-and-answer chatbot, LingoLift possesses capabiliti
 | **Generates Day-wise Curriculum Activities** | ❌ No | ✅ Yes |
 | **Adapts Recommendations Based on Profile** | ❌ No | ✅ Yes |
 
-This enables LingoLift to function as a personalized **AI Learning Partner** rather than a simple search interface.
+This enables LLP to function as a personalized **AI Learning Partner** rather than a simple search interface.
 
 ---
 

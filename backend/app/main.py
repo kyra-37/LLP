@@ -11,13 +11,14 @@ from app.tools.progress_tracker_tool import ProgressTrackerTool
 from app.routes.chat import router as chat_router
 from app.routes.admin import router as admin_router
 from app.routes.debug import router as debug_router
+from app.routes.auth import router as auth_router
 
-app = FastAPI(title="LingoLift API", description="AI language partner backend service", version="1.0.0")
+app = FastAPI(title="Language Learning Pal API", description="AI language partner backend service", version="1.0.0")
 
 # Setup CORS policy rules for Frontend communication
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:3000", "*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -27,6 +28,7 @@ app.add_middleware(
 app.include_router(chat_router)
 app.include_router(admin_router)
 app.include_router(debug_router)
+app.include_router(auth_router)
 
 @app.get("/")
 def home():
@@ -34,7 +36,7 @@ def home():
     Health check home endpoint.
     """
     return {
-        "message": "LingoLift API Running",
+        "message": "Language Learning Pal API Running",
         "status": "healthy"
     }
 

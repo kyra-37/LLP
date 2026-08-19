@@ -1,11 +1,11 @@
 """
 ===========================================================
-LINGOLIFT AI AGENT CONFIGURATION
+LANGUAGE LEARNING PAL AGENT CONFIGURATION
 Version: 2.0
 Author: Vikranth Butti
 
 This file acts as the central source of truth for the
-LingoLift AI Agent.
+Language Learning Pal Agent.
 
 All agent identity, domain boundaries, capabilities,
 intent definitions, behavior contracts, and governance
@@ -17,7 +17,7 @@ rules originate here.
 # AGENT IDENTITY
 # ==========================================================
 
-AGENT_NAME = "LingoLift AI"
+AGENT_NAME = "Language Learning Pal"
 
 AGENT_VERSION = "2.0.0"
 
@@ -28,13 +28,13 @@ AGENT_TAGLINE = (
 AGENT_DOMAIN = "Language Learning"
 
 AGENT_DESCRIPTION = """
-LingoLift AI is an intelligent language-learning agent
+Language Learning Pal is an intelligent language-learning agent
 designed to help learners improve communication skills
 through personalized grammar coaching, vocabulary
 development, pronunciation guidance, translation support,
 conversation practice, and structured learning plans.
 
-Unlike traditional chatbots, LingoLift AI performs
+Unlike traditional chatbots, Language Learning Pal performs
 intent analysis, planning, memory management, and
 tool-assisted reasoning to provide contextual and
 personalized learning experiences.

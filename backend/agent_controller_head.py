@@ -700,20 +700,7 @@ class AgentController:
                         memory=context.memory,
                         tool_output=plan_dict
                     )
-                    try:
-                        context.response = generate_response(prompt)
-                    except Exception:
-                        return AgentResponse(
-                            success=False,
-                            response="An error occurred while processing your request.",
-                            intent=context.intent,
-                            confidence=0.0,
-                            state=context.state.value,
-                            metadata={
-                                "session_id": context.session_id,
-                                "execution_time": (datetime.utcnow() - start_time).total_seconds()
-                            }
-                        )
+                    context.response = generate_response(prompt)
                     context.update_state(AgentState.COMPLETED)
                     
                     MemoryManager.add_session_memory(
@@ -1049,32 +1036,6 @@ class AgentController:
                     AgentState.PLAN_GENERATION
                 )
 
-                if MemoryManager.has_completed_profile(user_id):
-                    profile = MemoryManager.get_profile(user_id)
-                    level = profile.get("learning_level", "Not Specified")
-                    goal = profile.get("goal", "Not Specified")
-                    weak_areas = profile.get("weak_areas", [])
-                    weak_areas_str = ", ".join(weak_areas) if weak_areas else "Not Specified"
-                    context.response = (
-                        f"I already know: Level: **{level}**, Goal: **{goal}**, Weak Areas: **{weak_areas_str}**"
-                    )
-                    MemoryManager.add_session_memory(
-                        user_id=user_id,
-                        message=message,
-                        response=context.response
-                    )
-                    return AgentResponse(
-                        success=True,
-                        response=context.response,
-                        intent=context.intent,
-                        confidence=1.0,
-                        state=context.state.value,
-                        metadata={
-                            "session_id": context.session_id,
-                            "execution_time": (datetime.utcnow() - start_time).total_seconds()
-                        }
-                    )
-
                 level = None
                 if "beginner" in message_lower:
                     level = "Beginner"
@@ -1184,22 +1145,9 @@ class AgentController:
                         tool_output=plan.to_dict()
                     )
 
-                    try:
-                        context.response = generate_response(
-                            prompt
-                        )
-                    except Exception:
-                        return AgentResponse(
-                            success=False,
-                            response="An error occurred while processing your request.",
-                            intent=context.intent,
-                            confidence=0.0,
-                            state=context.state.value,
-                            metadata={
-                                "session_id": context.session_id,
-                                "execution_time": (datetime.utcnow() - start_time).total_seconds()
-                            }
-                        )
+                    context.response = generate_response(
+                        prompt
+                    )
 
             # ==========================================
             # TOOL EXECUTION
@@ -1306,20 +1254,7 @@ class AgentController:
                     tool_output=tool_res
                 )
 
-                try:
-                    context.response = generate_response(prompt)
-                except Exception:
-                    return AgentResponse(
-                        success=False,
-                        response="An error occurred while processing your request.",
-                        intent=context.intent,
-                        confidence=0.0,
-                        state=context.state.value,
-                        metadata={
-                            "session_id": context.session_id,
-                            "execution_time": (datetime.utcnow() - start_time).total_seconds()
-                        }
-                    )
+                context.response = generate_response(prompt)
 
             # ==========================================
             # REFLECTION

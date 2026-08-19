@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI LEARNING ANALYTICS ENGINE
+LANGUAGE LEARNING PAL LEARNING ANALYTICS ENGINE
 
 Purpose:
 - Analytics for student learning progress

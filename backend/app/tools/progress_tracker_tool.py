@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI PROGRESS TRACKER TOOL
+LANGUAGE LEARNING PAL PROGRESS TRACKER TOOL
 
 Purpose:
 - Learning Progress Tracking

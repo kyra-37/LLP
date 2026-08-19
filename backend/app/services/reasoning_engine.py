@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI REASONING ENGINE
+LANGUAGE LEARNING PAL REASONING ENGINE
 Version: 2.0
 
 Purpose:

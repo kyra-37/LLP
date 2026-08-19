@@ -21,11 +21,11 @@ const Roadmap = ({ data, hasProfile }) => {
 
   return (
     <div className="dashboard-card">
-      <div className="card-title">
+      <div className="card-title" style={{ color: '#818cf8' }}>
         <Layers size={16} /> 30-Day Roadmap
       </div>
 
-      <div className="roadmap-timeline" style={{ marginTop: '0.5rem' }}>
+      <div className="roadmap-timeline" style={{ marginTop: '0.6rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
         {roadmapKeys.map((key, idx) => {
           const weekData = data[key];
           const isCompleted = weekData?.status === 'completed';
@@ -35,13 +35,13 @@ const Roadmap = ({ data, hasProfile }) => {
           const label = key.charAt(0).toUpperCase() + key.slice(1).replace(/(\d+)/, ' $1');
 
           return (
-            <div key={idx} className={`roadmap-item ${isCompleted ? 'completed' : ''} ${isActive ? 'active' : ''}`}>
-              <div className="roadmap-icon">
-                {isCompleted ? <Check size={12} /> : isActive ? <Play size={10} fill="currentColor" /> : <Lock size={10} />}
+            <div key={idx} className={`roadmap-item ${isCompleted ? 'completed' : ''} ${isActive ? 'active' : ''}`} style={{ display: 'flex', gap: '0.85rem', alignItems: 'center' }}>
+              <div className="roadmap-icon" style={{ background: isCompleted ? '#10b981' : isActive ? '#6366f1' : 'rgba(255,255,255,0.06)', color: '#ffffff', borderColor: isCompleted ? '#10b981' : isActive ? '#6366f1' : 'rgba(255,255,255,0.15)' }}>
+                {isCompleted ? <Check size={14} /> : isActive ? <Play size={12} fill="currentColor" /> : <Lock size={12} />}
               </div>
               <div className="roadmap-content">
-                <div style={{ fontSize: '0.65rem', color: '#86868b', fontWeight: 600 }}>{label}</div>
-                <div style={{ fontSize: '0.8rem', fontWeight: 500, color: isCompleted || isActive ? '#1d1d1f' : '#86868b' }}>
+                <div style={{ fontSize: '0.7rem', color: '#94a3b8', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>{label}</div>
+                <div style={{ fontSize: '0.92rem', fontWeight: 700, color: isCompleted ? '#34d399' : isActive ? '#ffffff' : '#94a3b8' }}>
                   {weekData?.name || 'Locked'}
                 </div>
               </div>

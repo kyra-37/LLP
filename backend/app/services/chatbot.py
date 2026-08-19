@@ -4,7 +4,7 @@ from app.services.llm_service import generate_response
 
 def process_message(user_message: str) -> dict:
     """
-    Main orchestration service for LingoLift chatbot pipeline.
+    Main orchestration service for Language Learning Pal chatbot pipeline.
     1. Classifies message domain
     2. Builds custom engineering prompt
     3. Requests Groq API response
@@ -24,8 +24,8 @@ def process_message(user_message: str) -> dict:
             "feature": feature,
             "response": response
         }
-    except Exception as e:
+    except Exception:
         return {
             "success": False,
-            "error": str(e)
+            "response": "An error occurred while processing your request."
         }

@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI REFLECTION RESULT MODEL
+LANGUAGE LEARNING PAL REFLECTION RESULT MODEL
 Version: 2.0
 
 Purpose:

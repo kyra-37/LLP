@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI TOOL ROUTER TEST SUITE
+LANGUAGE LEARNING PAL TOOL ROUTER TEST SUITE
 Version: 2.0
 
 Purpose:

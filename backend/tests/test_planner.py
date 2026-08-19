@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI PLANNER TEST SUITE
+LANGUAGE LEARNING PAL PLANNER TEST SUITE
 Version: 2.0
 ===========================================================
 """

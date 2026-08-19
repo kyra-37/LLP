@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI TEST CONFIGURATION
+LANGUAGE LEARNING PAL TEST CONFIGURATION
 Version: 2.0
 
 Purpose:

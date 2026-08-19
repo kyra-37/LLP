@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI INTENT ENGINE TEST SUITE
+LANGUAGE LEARNING PAL INTENT ENGINE TEST SUITE
 Version: 2.0
 
 Purpose:

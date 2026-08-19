@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI MEMORY MANAGER
+LANGUAGE LEARNING PAL MEMORY MANAGER
 Version: 2.0
 
 Responsibilities:

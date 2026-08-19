@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI CHAT ROUTES
+LANGUAGE LEARNING PAL CHAT ROUTES
 Version: 2.0
 
 Purpose:
@@ -29,7 +29,7 @@ from app.services.agent_controller import AgentController
 
 router = APIRouter(
     prefix="/chat",
-    tags=["LingoLift AI"]
+    tags=["Language Learning Pal"]
 )
 
 
@@ -139,7 +139,7 @@ async def health_check():
         "status": "healthy",
 
         "service":
-            "LingoLift AI",
+            "Language Learning Pal",
 
         "version":
             "2.0",
@@ -159,7 +159,7 @@ async def agent_info():
     return {
 
         "agent_name":
-            "LingoLift AI",
+            "Language Learning Pal",
 
         "version":
             "2.0",

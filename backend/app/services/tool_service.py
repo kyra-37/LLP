@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI TOOL SERVICE
+LANGUAGE LEARNING PAL TOOL SERVICE
 
 Purpose:
 - Central Tool Orchestration

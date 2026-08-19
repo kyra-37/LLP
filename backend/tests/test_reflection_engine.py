@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI REFLECTION ENGINE TEST SUITE
+LANGUAGE LEARNING PAL REFLECTION ENGINE TEST SUITE
 Version: 2.0
 
 Purpose:

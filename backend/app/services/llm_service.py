@@ -43,12 +43,12 @@ def generate_response(prompt: str) -> str:
         )
         return clean_llm_text(completion.choices[0].message.content)
     except Exception as e:
-        return f"Error: {str(e)}"
+        raise RuntimeError(f"LLM request failed: {str(e)}") from e
 
 
 """
 ===========================================================
-LINGOLIFT AI LLM SERVICE
+LANGUAGE LEARNING PAL LLM SERVICE
 Version: 2.0
 
 Purpose:

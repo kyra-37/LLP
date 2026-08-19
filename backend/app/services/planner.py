@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI PLAN MODEL
+LANGUAGE LEARNING PAL PLAN MODEL
 Version: 2.0
 
 Purpose:

@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI DOMAIN CONFIGURATION
+LANGUAGE LEARNING PAL DOMAIN CONFIGURATION
 
 Defines:
 
@@ -255,7 +255,7 @@ RECOMMENDED_FEATURES = {
 # ==========================================================
 
 OUT_OF_DOMAIN_RESPONSE = """
-I am LingoLift AI, a Language Learning Agent.
+I am Language Learning Pal, a Language Learning Agent.
 
 I specialize in:
 

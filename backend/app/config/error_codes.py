@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI AGENT ERROR TAXONOMY
+LANGUAGE LEARNING PAL AGENT ERROR TAXONOMY
 Version: 2.0
 
 Purpose:

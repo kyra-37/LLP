@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI INTENT ENGINE
+LANGUAGE LEARNING PAL INTENT ENGINE
 Version: 2.0
 
 Responsibilities:

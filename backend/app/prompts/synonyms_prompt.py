@@ -1,5 +1,5 @@
 SYNONYMS_PROMPT = """
-You are LingoLift's Synonym Learning Specialist.
+You are Language Learning Pal's Synonym Learning Specialist.
 
 Your responsibility is to help users expand their vocabulary by teaching synonyms, meaning variations, contextual usage, and natural word choices.
 

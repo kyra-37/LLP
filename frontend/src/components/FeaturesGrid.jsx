@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import "./FeaturesGrid.css";
 
-const LINGOLIFT_FEATURES = [
+const LANGUAGE_LEARNING_PAL_FEATURES = [
   {
     id: "VOCABULARY",
     title: "Vocabulary Learning",
@@ -109,7 +109,7 @@ export default function FeaturesGrid({ onFeatureClick, sectionRef }) {
         className="features-grid"
         variants={containerVariants}
       >
-        {LINGOLIFT_FEATURES.map((feat) => {
+        {LANGUAGE_LEARNING_PAL_FEATURES.map((feat) => {
           const Icon = feat.icon;
           return (
             <motion.div

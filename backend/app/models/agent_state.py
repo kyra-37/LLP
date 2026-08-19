@@ -1,10 +1,10 @@
 """
 ===========================================================
-LINGOLIFT AI AGENT STATE MACHINE
+LANGUAGE LEARNING PAL AGENT STATE MACHINE
 Version: 2.0
 
 Enterprise-grade lifecycle management for the
-LingoLift AI Agent.
+Language Learning Pal Agent.
 
 Purpose:
 - Track every stage of agent execution

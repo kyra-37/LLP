@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI AGENT CONTEXT
+LANGUAGE LEARNING PAL AGENT CONTEXT
 
 Central data container shared across all agent components.
 

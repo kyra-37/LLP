@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI MEMORY MANAGER TEST SUITE
+LANGUAGE LEARNING PAL MEMORY MANAGER TEST SUITE
 Version: 2.0
 
 Purpose:
@@ -647,4 +647,4 @@ def test_day_and_progress_tracking(test_user, isolated_memory):
     # Progress check on profile object directly (backward compatibility)
     progress_dict = MemoryManager.get_progress(test_user)
     assert isinstance(progress_dict, dict)
-    assert progress_dict["overall_progress"] == 3.3
+    assert progress_dict["overall_progress"] == 3.3

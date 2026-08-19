@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI LLM CONFIGURATION
+LANGUAGE LEARNING PAL LLM CONFIGURATION
 Version: 2.0
 
 Purpose:
@@ -19,9 +19,11 @@ Supported Providers:
 """
 
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv()
+BACKEND_ROOT = Path(__file__).resolve().parents[2]
+load_dotenv(dotenv_path=BACKEND_ROOT / ".env", override=False)
 
 # =========================================================
 # ACTIVE PROVIDER

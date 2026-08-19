@@ -13,14 +13,12 @@ export default function Footer() {
     >
       <div className="footer-content">
         <div className="footer-branding">
-          <h4>LingoLift</h4>
+          <h4>Language Learning Pal</h4>
           <p>AI-Powered Language Learning Partner</p>
         </div>
         <div className="footer-details">
-          <p>Vikranth Butti</p>
-          <p>Built for GENAI Internship - Milestone 2</p>
           <span className="footer-copyright">
-            &copy; 2026 LingoLift. All Rights Reserved.
+            &copy; 2026 Language Learning Pal. All Rights Reserved.
           </span>
         </div>
       </div>

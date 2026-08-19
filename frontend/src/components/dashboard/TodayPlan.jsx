@@ -6,11 +6,11 @@ const TodayPlan = ({ data, hasProfile, onToggleTask, onCompleteDay }) => {
   if (!hasProfile || !data) {
     return (
       <div className="dashboard-card" style={{ textAlign: 'center', padding: '2.5rem 1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-        <div style={{ background: '#f5f5f7', width: '56px', height: '56px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
-          <Compass size={28} color="#86868b" />
+        <div style={{ background: 'rgba(99, 102, 241, 0.15)', width: '56px', height: '56px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
+          <Compass size={28} color="#818cf8" />
         </div>
-        <h4 style={{ fontSize: '1rem', color: '#1d1d1f', margin: '0 0 0.5rem', fontWeight: 700 }}>Curriculum Locked</h4>
-        <p style={{ fontSize: '0.8rem', color: '#86868b', margin: 0, lineHeight: 1.4 }}>Initialize your learning profile in the chat to generate today's plan.</p>
+        <h4 style={{ fontSize: '1rem', color: '#ffffff', margin: '0 0 0.5rem', fontWeight: 700 }}>Curriculum Locked</h4>
+        <p style={{ fontSize: '0.82rem', color: '#94a3b8', margin: 0, lineHeight: 1.4 }}>Initialize your learning profile in the chat to generate today's plan.</p>
       </div>
     );
   }
@@ -20,26 +20,26 @@ const TodayPlan = ({ data, hasProfile, onToggleTask, onCompleteDay }) => {
   return (
     <div className="dashboard-card" style={{ gap: '1.25rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div className="card-title" style={{ color: '#0071e3' }}>
+        <div className="card-title" style={{ color: '#818cf8' }}>
           <Compass size={16} /> TODAY'S PLAN
         </div>
-        <div style={{ background: '#0071e3', color: '#fff', padding: '0.2rem 0.8rem', borderRadius: '20px', fontSize: '0.7rem', fontWeight: 800 }}>
+        <div style={{ background: 'linear-gradient(135deg, #6366f1, #8b5cf6)', color: '#ffffff', padding: '0.25rem 0.9rem', borderRadius: '20px', fontSize: '0.72rem', fontWeight: 800 }}>
           DAY {data.day}
         </div>
       </div>
 
-      <div style={{ background: '#f5f5f7', padding: '1rem', borderRadius: '12px', border: '1px solid #d2d2d7' }}>
+      <div style={{ background: 'rgba(30, 41, 59, 0.6)', padding: '1.1rem', borderRadius: '14px', border: '1px solid rgba(255, 255, 255, 0.12)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
-          <Target size={14} color="#0071e3" />
-          <span style={{ fontSize: '0.7rem', color: '#86868b', fontWeight: 700 }}>OBJECTIVE</span>
+          <Target size={14} color="#38bdf8" />
+          <span style={{ fontSize: '0.7rem', color: '#38bdf8', fontWeight: 700, letterSpacing: '0.05em' }}>OBJECTIVE</span>
         </div>
-        <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#1d1d1f', lineHeight: 1.4 }}>
+        <div style={{ fontSize: '1rem', fontWeight: 700, color: '#ffffff', lineHeight: 1.4 }}>
           {data.objective}
         </div>
       </div>
 
-      <div className="tasks-list" style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-        <div style={{ fontSize: '0.7rem', color: '#86868b', fontWeight: 700, marginBottom: '0.2rem' }}>TASKS TO COMPLETE</div>
+      <div className="tasks-list" style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+        <div style={{ fontSize: '0.7rem', color: '#94a3b8', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>TASKS TO COMPLETE</div>
         {data.tasks.map((task, idx) => (
           <div
             key={idx}
@@ -49,22 +49,22 @@ const TodayPlan = ({ data, hasProfile, onToggleTask, onCompleteDay }) => {
               display: 'flex',
               alignItems: 'flex-start',
               gap: '0.8rem',
-              padding: '0.75rem',
-              borderRadius: '10px',
-              background: task.completed ? '#f6ffed' : '#fff',
-              border: `1px solid ${task.completed ? '#b7eb8f' : '#d2d2d7'}`,
+              padding: '0.85rem',
+              borderRadius: '12px',
+              background: task.completed ? 'rgba(16, 185, 129, 0.15)' : 'rgba(30, 41, 59, 0.5)',
+              border: `1px solid ${task.completed ? 'rgba(16, 185, 129, 0.4)' : 'rgba(255, 255, 255, 0.12)'}`,
               cursor: 'pointer',
               transition: 'all 0.2s'
             }}
           >
             <div style={{ marginTop: '0.1rem' }}>
-              {task.completed ? <CheckCircle2 size={18} color="#34c759" /> : <Circle size={18} color="#d2d2d7" />}
+              {task.completed ? <CheckCircle2 size={18} color="#34d399" /> : <Circle size={18} color="#94a3b8" />}
             </div>
             <span style={{
-              fontSize: '0.85rem',
-              fontWeight: 500,
+              fontSize: '0.9rem',
+              fontWeight: 600,
               textDecoration: task.completed ? 'line-through' : 'none',
-              color: task.completed ? '#86868b' : '#1d1d1f',
+              color: task.completed ? '#a7f3d0' : '#ffffff',
               lineHeight: 1.3
             }}>
               {task.name}
@@ -74,19 +74,19 @@ const TodayPlan = ({ data, hasProfile, onToggleTask, onCompleteDay }) => {
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '0.5rem' }}>
-        <div style={{ background: '#f5f5f7', padding: '0.75rem', borderRadius: '10px' }}>
+        <div style={{ background: 'rgba(30, 41, 59, 0.5)', padding: '0.85rem', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.25rem' }}>
-            <BarChart size={12} color="#86868b" />
-            <span style={{ fontSize: '0.6rem', color: '#86868b', fontWeight: 700 }}>ASSESSMENT</span>
+            <BarChart size={13} color="#818cf8" />
+            <span style={{ fontSize: '0.65rem', color: '#818cf8', fontWeight: 700, textTransform: 'uppercase' }}>ASSESSMENT</span>
           </div>
-          <div style={{ fontSize: '0.75rem', color: '#1d1d1f', lineHeight: 1.3 }}>{data.assessment}</div>
+          <div style={{ fontSize: '0.82rem', color: '#ffffff', lineHeight: 1.35, fontWeight: 500 }}>{data.assessment}</div>
         </div>
-        <div style={{ background: '#f5f5f7', padding: '0.75rem', borderRadius: '10px' }}>
+        <div style={{ background: 'rgba(30, 41, 59, 0.5)', padding: '0.85rem', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.25rem' }}>
-            <Flag size={12} color="#86868b" />
-            <span style={{ fontSize: '0.6rem', color: '#86868b', fontWeight: 700 }}>OUTCOME</span>
+            <Flag size={13} color="#22d3ee" />
+            <span style={{ fontSize: '0.65rem', color: '#22d3ee', fontWeight: 700, textTransform: 'uppercase' }}>OUTCOME</span>
           </div>
-          <div style={{ fontSize: '0.75rem', color: '#1d1d1f', lineHeight: 1.3 }}>{data.expected_outcome}</div>
+          <div style={{ fontSize: '0.82rem', color: '#ffffff', lineHeight: 1.35, fontWeight: 500 }}>{data.expected_outcome}</div>
         </div>
       </div>
 
@@ -95,19 +95,19 @@ const TodayPlan = ({ data, hasProfile, onToggleTask, onCompleteDay }) => {
           onClick={onCompleteDay}
           style={{
             marginTop: '0.5rem',
-            padding: '1rem',
-            background: '#34c759',
-            color: '#fff',
+            padding: '0.95rem',
+            background: 'linear-gradient(135deg, #10b981, #059669)',
+            color: '#ffffff',
             border: 'none',
-            borderRadius: '12px',
+            borderRadius: '14px',
             fontWeight: 800,
-            fontSize: '1rem',
+            fontSize: '0.95rem',
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             gap: '0.6rem',
-            boxShadow: '0 4px 12px rgba(52, 199, 89, 0.2)',
+            boxShadow: '0 4px 20px rgba(16, 185, 129, 0.4)',
             transition: 'transform 0.2s'
           }}
           onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
@@ -116,7 +116,7 @@ const TodayPlan = ({ data, hasProfile, onToggleTask, onCompleteDay }) => {
           COMPLETE DAY & ADVANCE <ChevronRight size={18} />
         </button>
       ) : (
-        <div style={{ textAlign: 'center', padding: '0.5rem', fontSize: '0.75rem', color: '#86868b', fontStyle: 'italic' }}>
+        <div style={{ textAlign: 'center', padding: '0.5rem', fontSize: '0.78rem', color: '#94a3b8', fontStyle: 'italic' }}>
           Complete all tasks to unlock next day
         </div>
       )}

@@ -26,22 +26,22 @@ const AgentStatus = ({ status, message }) => {
 
   return (
     <div className="dashboard-card">
-      <div className="card-title">
-        <Activity size={14} /> Agent Intelligence Pipeline
+      <div className="card-title" style={{ color: '#818cf8' }}>
+        <Activity size={16} /> Agent Intelligence Pipeline
       </div>
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.25rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.35rem' }}>
         <div className="status-dot-pulse" style={{
           width: '10px',
           height: '10px',
           borderRadius: '50%',
           backgroundColor: getStatusColor(),
-          boxShadow: `0 0 8px ${getStatusColor()}`
+          boxShadow: `0 0 10px ${getStatusColor()}`
         }} />
-        <span style={{ fontSize: '0.85rem', fontWeight: 700, color: '#1d1d1f' }}>{status}</span>
+        <span style={{ fontSize: '0.92rem', fontWeight: 800, color: '#ffffff' }}>{status}</span>
       </div>
 
-      <div className="pipeline-container" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginTop: '0.5rem' }}>
+      <div className="pipeline-container" style={{ display: 'flex', flexDirection: 'column', gap: '0.55rem', marginTop: '0.5rem' }}>
         {steps.map((step, idx) => {
           // Logic to show progression
           const stepOrder = steps.map(s => s.label);
@@ -50,9 +50,9 @@ const AgentStatus = ({ status, message }) => {
           const isActive = status === step.label;
 
           return (
-            <div key={idx} className={`pipeline-step ${isActive || isPast ? 'active' : ''}`} style={{ opacity: isActive || isPast ? 1 : 0.3 }}>
-              <div className="step-dot" style={{ background: isPast ? '#34c759' : isActive ? getStatusColor() : '#d2d2d7' }} />
-              <span className="step-name" style={{ fontWeight: isActive ? 700 : 500, color: isActive ? '#1d1d1f' : '#86868b' }}>
+            <div key={idx} className={`pipeline-step ${isActive || isPast ? 'active' : ''}`} style={{ opacity: isActive || isPast ? 1 : 0.4 }}>
+              <div className="step-dot" style={{ background: isPast ? '#34d399' : isActive ? getStatusColor() : 'rgba(255,255,255,0.2)' }} />
+              <span className="step-name" style={{ fontWeight: isActive ? 800 : 500, color: isActive ? '#ffffff' : isPast ? '#34d399' : '#94a3b8', fontSize: '0.85rem' }}>
                 {step.label} {isPast && '✓'}
               </span>
             </div>
@@ -60,7 +60,7 @@ const AgentStatus = ({ status, message }) => {
         })}
       </div>
 
-      <p style={{ fontSize: '0.7rem', color: '#86868b', marginTop: '0.75rem', fontStyle: 'italic', lineHeight: 1.3 }}>
+      <p style={{ fontSize: '0.78rem', color: '#cbd5e1', marginTop: '0.75rem', fontStyle: 'italic', lineHeight: 1.35 }}>
         {message}
       </p>
     </div>

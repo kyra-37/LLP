@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI WORD OF DAY TOOL
+LANGUAGE LEARNING PAL WORD OF DAY TOOL
 
 Purpose:
 - Generate Daily Vocabulary

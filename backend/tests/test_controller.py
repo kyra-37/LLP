@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI AGENT CONTROLLER TEST SUITE
+LANGUAGE LEARNING PAL AGENT CONTROLLER TEST SUITE
 Version: 2.0
 
 Purpose:
@@ -795,4 +795,4 @@ def test_30_day_plan_tracking(isolated_memory):
     assert "Grammar Score:" in response.response
     assert "Vocabulary Score:" in response.response
     assert "Pronunciation Score:" in response.response
-    assert "Placement Readiness Score:" in response.response
+    assert "Placement Readiness Score:" in response.response

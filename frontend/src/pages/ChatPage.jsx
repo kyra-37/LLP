@@ -1,4 +1,13 @@
 import { useState, useRef, useEffect } from "react";
+import { 
+  Sparkles, 
+  MessageSquare, 
+  BarChart3, 
+  Calendar, 
+  Wrench, 
+  Compass, 
+  LogOut
+} from "lucide-react";
 import { sendMessage, fetchDashboardData } from "../services/api";
 import Hero from "../components/Hero";
 import ProjectDescription from "../components/ProjectDescription";
@@ -7,13 +16,14 @@ import ChatDemo from "../components/ChatDemo";
 import Footer from "../components/Footer";
 import "./ChatPage.css";
 
-export default function ChatPage() {
+export default function ChatPage({ user, onSignOut }) {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [dashboardData, setDashboardData] = useState(null);
   const [agentStatus, setAgentStatus] = useState("Idle");
   const [statusMessage, setStatusMessage] = useState("Idle - Ready to assist");
+  const [activeTab, setActiveTab] = useState("chat");
 
   const chatSectionRef = useRef(null);
   const featuresSectionRef = useRef(null);
@@ -34,13 +44,16 @@ export default function ChatPage() {
   }, []);
 
   const scrollToChat = () => {
-    setTimeout(() => {
-      chatSectionRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
+    setActiveTab("chat");
   };
 
   const scrollToFeatures = () => {
-    featuresSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    setActiveTab("features");
+  };
+
+  const handleTabChange = (tabId) => {
+    setActiveTab(tabId);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleSend = async (text = message) => {
@@ -63,7 +76,9 @@ export default function ChatPage() {
 
     setMessage("");
     setLoading(true);
-    scrollToChat();
+    if (activeTab !== "chat") {
+      setActiveTab("chat");
+    }
 
     // 1. Analyzing Intent
     setAgentStatus("Analyzing Intent");
@@ -130,7 +145,7 @@ export default function ChatPage() {
       clearTimeout(responseTimeout);
 
       setAgentStatus("Idle");
-      setStatusMessage("Unable to connect to the LingoLift AI backend service.");
+      setStatusMessage("Unable to connect to the Language Learning Pal backend service.");
 
       const responseTimestamp = new Date().toLocaleTimeString([], {
         hour: "2-digit",
@@ -141,7 +156,7 @@ export default function ChatPage() {
         ...prev,
         {
           role: "assistant",
-          text: "Unable to connect to the LingoLift AI backend service. Please check your internet connection.",
+          text: "Unable to connect to the Language Learning Pal backend service. Please check your internet connection.",
           intent: null,
           time: responseTimestamp,
         },
@@ -158,47 +173,103 @@ export default function ChatPage() {
   };
 
   const handleFeatureClick = (prompt) => {
+    setActiveTab("chat");
     handleSend(prompt);
   };
 
   const handlePromptClick = (prompt) => {
+    setActiveTab("chat");
     handleSend(prompt);
   };
 
+  const userInitial = (user?.name || user?.email || "U").charAt(0).toUpperCase();
+
+  const featureTabs = [
+    { id: "chat", label: "AI Coach Chat", icon: MessageSquare, badge: "Live" },
+    { id: "analytics", label: "Profile & Stats", icon: BarChart3 },
+    { id: "roadmap", label: "30-Day Plan", icon: Calendar },
+    { id: "tools", label: "AI Tools & Practice", icon: Wrench },
+    { id: "features", label: "Capabilities", icon: Sparkles },
+    { id: "overview", label: "Getting Started", icon: Compass },
+  ];
+
   return (
     <div className="apple-page-wrapper">
+      {/* Top Header */}
+      <header className="profile-header">
+        <div className="profile-info">
+          <div className="profile-avatar">{userInitial}</div>
+          <div>
+            <div className="profile-name">{user?.name || user?.email || "Guest User"}</div>
+            <div className="profile-email">{user?.email || "Signed in"}</div>
+          </div>
+        </div>
+        <button className="profile-signout" onClick={onSignOut}>
+          <LogOut size={14} style={{ marginRight: "0.4rem", verticalAlign: "middle" }} />
+          Sign out
+        </button>
+      </header>
+
+      {/* W3-Inspired Sticky Navigation Toggles Bar */}
+      <nav className="feature-toggles-bar">
+        <div className="toggles-nav-container">
+          <span className="toggles-brand">Language Learning Pal:</span>
+          {featureTabs.map((tab) => {
+            const Icon = tab.icon;
+            const isActive = activeTab === tab.id;
+            return (
+              <button
+                key={tab.id}
+                className={`feature-toggle-btn ${isActive ? "active" : ""}`}
+                onClick={() => handleTabChange(tab.id)}
+              >
+                <Icon size={16} />
+                <span>{tab.label}</span>
+                {tab.badge ? <span className="feature-badge">{tab.badge}</span> : null}
+              </button>
+            );
+          })}
+        </div>
+      </nav>
+
       <div className="content-wrapper">
-        {/* Section 1: Hero Section */}
-        <Hero
-          onStartLearning={scrollToChat}
-          onExploreFeatures={scrollToFeatures}
-        />
+        {/* Render Overview/Getting Started if active */}
+        {activeTab === "overview" && (
+          <>
+            <Hero
+              onStartLearning={scrollToChat}
+              onExploreFeatures={scrollToFeatures}
+            />
+            <ProjectDescription />
+          </>
+        )}
 
-        {/* Section 2: Project Description Section */}
-        <ProjectDescription />
-
-        {/* Section 3: Features Grid */}
-        <FeaturesGrid
-          sectionRef={featuresSectionRef}
-          onFeatureClick={handleFeatureClick}
-        />
+        {/* Render Features Grid directly if active */}
+        {activeTab === "features" && (
+          <FeaturesGrid
+            sectionRef={featuresSectionRef}
+            onFeatureClick={handleFeatureClick}
+          />
+        )}
       </div>
 
-      {/* Section 4 & 5: Example Questions & Chat Interface */}
-      {/* Moved out of content-wrapper to allow full-width background */}
-      <ChatDemo
-        sectionRef={chatSectionRef}
-        messages={messages}
-        inputMessage={message}
-        setInputMessage={setMessage}
-        onSendMessage={() => handleSend()}
-        onPromptClick={handlePromptClick}
-        isLoading={loading}
-        dashboardData={dashboardData}
-        agentStatus={agentStatus}
-        statusMessage={statusMessage}
-        onRefreshDashboard={loadDashboard}
-      />
+      {/* Render Main Workspace Component based on active tab */}
+      {activeTab !== "overview" && activeTab !== "features" && (
+        <ChatDemo
+          sectionRef={chatSectionRef}
+          messages={messages}
+          inputMessage={message}
+          setInputMessage={setMessage}
+          onSendMessage={() => handleSend()}
+          onPromptClick={handlePromptClick}
+          isLoading={loading}
+          dashboardData={dashboardData}
+          agentStatus={agentStatus}
+          statusMessage={statusMessage}
+          onRefreshDashboard={loadDashboard}
+          activeTab={activeTab}
+        />
+      )}
 
       <Footer />
     </div>

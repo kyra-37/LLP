@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI GUARDRAILS ENGINE
+LANGUAGE LEARNING PAL GUARDRAILS ENGINE
 Version: 2.0
 
 Responsibilities:

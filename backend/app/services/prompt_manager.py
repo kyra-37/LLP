@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI PROMPT MANAGER
+LANGUAGE LEARNING PAL PROMPT MANAGER
 Version: 2.0
 
 Purpose:

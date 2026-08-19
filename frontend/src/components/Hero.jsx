@@ -29,7 +29,7 @@ export default function Hero({ onStartLearning, onExploreFeatures }) {
           animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         >
-          LingoLift
+          Language Learning Pal
         </motion.h1>
         
         <motion.p 

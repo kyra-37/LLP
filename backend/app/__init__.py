@@ -1,1 +1,1 @@
-# LingoLift Application Package
+# Language Learning Pal Application Package

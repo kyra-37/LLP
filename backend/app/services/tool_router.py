@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI TOOL ROUTER
+LANGUAGE LEARNING PAL TOOL ROUTER
 Version: 2.0
 
 Responsibilities:

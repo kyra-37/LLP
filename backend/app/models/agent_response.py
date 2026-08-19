@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI AGENT RESPONSE MODEL
+LANGUAGE LEARNING PAL AGENT RESPONSE MODEL
 Version: 2.0
 
 Purpose:

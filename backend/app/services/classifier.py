@@ -1,6 +1,6 @@
 from app.services.llm_service import generate_response
 
-# Supported feature categories in LingoLift
+# Supported feature categories in Language Learning Pal
 VALID_FEATURES = [
     "VOCABULARY",
     "GRAMMAR",
@@ -251,8 +251,11 @@ def ai_classifier(message: str) -> str:
     Queries LLM to classify unstructured or ambiguous inputs.
     """
     prompt = f"{CLASSIFIER_PROMPT}\n\nMessage:\n{message}\n"
-    result = generate_response(prompt)
-    result = result.strip().upper()
+    try:
+        result = generate_response(prompt)
+        result = result.strip().upper()
+    except Exception:
+        return "OUT_OF_DOMAIN"
 
     for feature in VALID_FEATURES:
         if feature in result:

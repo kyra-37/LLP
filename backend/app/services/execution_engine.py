@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI EXECUTION ENGINE
+LANGUAGE LEARNING PAL EXECUTION ENGINE
 
 Purpose:
 * Execute Agent Strategies

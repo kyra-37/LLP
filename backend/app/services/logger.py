@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI LOGGER
+LANGUAGE LEARNING PAL LOGGER
 Version: 2.0
 
 Purpose:
@@ -25,7 +25,7 @@ class AgentLogger:
 
     _initialized = False
 
-    logger = logging.getLogger("LingoLiftAI")
+    logger = logging.getLogger("LanguageLearningPal")
 
     LOG_DIRECTORY = Path("logs")
 
@@ -357,7 +357,7 @@ class AgentLogger:
 
             "status": "healthy",
 
-            "logger": "LingoLiftAI",
+            "logger": "LanguageLearningPal",
 
             "log_directory":
                 str(cls.LOG_DIRECTORY)

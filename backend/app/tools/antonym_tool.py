@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI ANTONYM TOOL
+LANGUAGE LEARNING PAL ANTONYM TOOL
 
 Purpose:
 - Fetch Antonyms

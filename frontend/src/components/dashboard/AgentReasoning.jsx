@@ -16,44 +16,44 @@ const AgentReasoning = ({ dashboardData, lastIntent, agentStatus }) => {
   };
 
   return (
-    <div className="dashboard-card" style={{ background: '#f8f9ff', border: '1px solid #e0e7ff' }}>
-      <div className="card-title" style={{ color: '#4f46e5' }}>
-        <Brain size={14} /> Agent Reasoning
+    <div className="dashboard-card" style={{ background: 'rgba(17, 24, 39, 0.85)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.12)' }}>
+      <div className="card-title" style={{ color: '#818cf8' }}>
+        <Brain size={16} /> Agent Reasoning
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-        <div style={{ display: 'flex', gap: '0.75rem' }}>
-          <Zap size={14} color="#f59e0b" style={{ marginTop: '0.2rem' }} />
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+          <Zap size={16} color="#fbbf24" style={{ marginTop: '0.2rem', flexShrink: 0 }} />
           <div>
-            <div style={{ fontSize: '0.65rem', fontWeight: 700, color: '#86868b', textTransform: 'uppercase' }}>Intent Detected</div>
-            <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#1d1d1f' }}>{reasoning.intent}</div>
+            <div style={{ fontSize: '0.68rem', fontWeight: 700, color: '#fbbf24', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Intent Detected</div>
+            <div style={{ fontSize: '0.92rem', fontWeight: 700, color: '#ffffff' }}>{reasoning.intent}</div>
           </div>
         </div>
 
-        <div style={{ display: 'flex', gap: '0.75rem' }}>
-          <Database size={14} color="#4f46e5" style={{ marginTop: '0.2rem' }} />
+        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+          <Database size={16} color="#818cf8" style={{ marginTop: '0.2rem', flexShrink: 0 }} />
           <div>
-            <div style={{ fontSize: '0.65rem', fontWeight: 700, color: '#86868b', textTransform: 'uppercase' }}>Memory Context</div>
-            <div style={{ fontSize: '0.75rem', color: '#1d1d1f' }}>
-               Goal: <strong>{reasoning.memory.goal}</strong><br/>
-               Level: {reasoning.memory.level}
+            <div style={{ fontSize: '0.68rem', fontWeight: 700, color: '#818cf8', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Memory Context</div>
+            <div style={{ fontSize: '0.85rem', color: '#cbd5e1', lineHeight: 1.4 }}>
+               Goal: <strong style={{ color: '#ffffff' }}>{reasoning.memory.goal}</strong><br/>
+               Level: <span style={{ color: '#ffffff' }}>{reasoning.memory.level}</span>
             </div>
           </div>
         </div>
 
-        <div style={{ display: 'flex', gap: '0.75rem' }}>
-          <Wrench size={14} color="#10b981" style={{ marginTop: '0.2rem' }} />
+        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+          <Wrench size={16} color="#34d399" style={{ marginTop: '0.2rem', flexShrink: 0 }} />
           <div>
-            <div style={{ fontSize: '0.65rem', fontWeight: 700, color: '#86868b', textTransform: 'uppercase' }}>Tool Execution</div>
-            <div style={{ fontSize: '0.8rem', color: '#1d1d1f', fontWeight: 600 }}>{reasoning.tool?.toUpperCase() || "NONE"}</div>
+            <div style={{ fontSize: '0.68rem', fontWeight: 700, color: '#34d399', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Tool Execution</div>
+            <div style={{ fontSize: '0.88rem', color: '#ffffff', fontWeight: 700 }}>{reasoning.tool?.toUpperCase() || "NONE"}</div>
           </div>
         </div>
 
-        <div style={{ display: 'flex', gap: '0.75rem' }}>
-          <MessageSquare size={14} color="#0071e3" style={{ marginTop: '0.2rem' }} />
+        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+          <MessageSquare size={16} color="#38bdf8" style={{ marginTop: '0.2rem', flexShrink: 0 }} />
           <div>
-            <div style={{ fontSize: '0.65rem', fontWeight: 700, color: '#86868b', textTransform: 'uppercase' }}>Current Action</div>
-            <div style={{ fontSize: '0.8rem', color: '#0071e3', fontWeight: 600 }}>{reasoning.action}</div>
+            <div style={{ fontSize: '0.68rem', fontWeight: 700, color: '#38bdf8', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Current Action</div>
+            <div style={{ fontSize: '0.88rem', color: '#ffffff', fontWeight: 700 }}>{reasoning.action}</div>
           </div>
         </div>
       </div>

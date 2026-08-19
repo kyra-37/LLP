@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI AGENT GOVERNANCE RULES
+LANGUAGE LEARNING PAL AGENT GOVERNANCE RULES
 Version: 2.0
 
 Defines:

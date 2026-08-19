@@ -13,51 +13,51 @@ const ToolIntegration = ({ data }) => {
 
   return (
     <div className="dashboard-card" style={{ gap: '1rem' }}>
-      <div className="card-title">
-        <Brain size={14} /> Tool Integration
+      <div className="card-title" style={{ color: '#818cf8' }}>
+        <Brain size={16} /> Tool Integration
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
         {vocabulary && (
-          <div className="tool-box" style={{ background: '#f3e5f5', border: '1px solid #e1bee7', padding: '0.75rem', borderRadius: '12px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.25rem' }}>
-              <BookOpen size={12} color="#af52de" />
-              <span style={{ fontSize: '0.65rem', fontWeight: 800, color: '#af52de', textTransform: 'uppercase' }}>Vocabulary</span>
+          <div className="tool-box" style={{ background: 'rgba(168, 85, 247, 0.15)', border: '1px solid rgba(168, 85, 247, 0.3)', padding: '0.85rem', borderRadius: '14px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.35rem' }}>
+              <BookOpen size={14} color="#c084fc" />
+              <span style={{ fontSize: '0.7rem', fontWeight: 800, color: '#c084fc', textTransform: 'uppercase' }}>Vocabulary</span>
             </div>
-            <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#1d1d1f' }}>{vocabulary.word}</div>
-            <div style={{ fontSize: '0.7rem', color: '#86868b', marginTop: '0.1rem' }}>{vocabulary.meaning}</div>
+            <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#ffffff' }}>{vocabulary.word}</div>
+            <div style={{ fontSize: '0.78rem', color: '#cbd5e1', marginTop: '0.2rem' }}>{vocabulary.meaning}</div>
           </div>
         )}
 
         {translation && (
-          <div className="tool-box" style={{ background: '#e8f5e9', border: '1px solid #c8e6c9', padding: '0.75rem', borderRadius: '12px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.25rem' }}>
-              <Languages size={12} color="#34c759" />
-              <span style={{ fontSize: '0.65rem', fontWeight: 800, color: '#34c759', textTransform: 'uppercase' }}>Translation</span>
+          <div className="tool-box" style={{ background: 'rgba(16, 185, 129, 0.15)', border: '1px solid rgba(16, 185, 129, 0.3)', padding: '0.85rem', borderRadius: '14px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.35rem' }}>
+              <Languages size={14} color="#34d399" />
+              <span style={{ fontSize: '0.7rem', fontWeight: 800, color: '#34d399', textTransform: 'uppercase' }}>Translation</span>
             </div>
-            <div style={{ fontSize: '0.75rem', color: '#86868b' }}>English: {translation.english}</div>
-            <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#1d1d1f' }}>Telugu: {translation.telugu}</div>
+            <div style={{ fontSize: '0.78rem', color: '#cbd5e1' }}>English: {translation.english}</div>
+            <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#ffffff', marginTop: '0.2rem' }}>Telugu: {translation.telugu}</div>
           </div>
         )}
 
         {pronunciation && (
-          <div className="tool-box" style={{ background: '#e1f5fe', border: '1px solid #b3e5fc', padding: '0.75rem', borderRadius: '12px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.25rem' }}>
-              <Volume2 size={12} color="#0071e3" />
-              <span style={{ fontSize: '0.65rem', fontWeight: 800, color: '#0071e3', textTransform: 'uppercase' }}>Pronunciation</span>
+          <div className="tool-box" style={{ background: 'rgba(6, 182, 212, 0.15)', border: '1px solid rgba(6, 182, 212, 0.3)', padding: '0.85rem', borderRadius: '14px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.35rem' }}>
+              <Volume2 size={14} color="#22d3ee" />
+              <span style={{ fontSize: '0.7rem', fontWeight: 800, color: '#22d3ee', textTransform: 'uppercase' }}>Pronunciation</span>
             </div>
-            <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#1d1d1f' }}>{pronunciation.word}</div>
-            <div style={{ fontSize: '0.75rem', color: '#0071e3', fontStyle: 'italic' }}>{pronunciation.phonetic}</div>
+            <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#ffffff' }}>{pronunciation.word}</div>
+            <div style={{ fontSize: '0.8rem', color: '#38bdf8', fontStyle: 'italic', marginTop: '0.2rem' }}>{pronunciation.phonetic}</div>
           </div>
         )}
 
         {grammar && (
-          <div className="tool-box" style={{ background: '#fff3e0', border: '1px solid #ffe0b2', padding: '0.75rem', borderRadius: '12px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.25rem' }}>
-              <SpellCheck size={12} color="#ff9500" />
-              <span style={{ fontSize: '0.65rem', fontWeight: 800, color: '#ff9500', textTransform: 'uppercase' }}>Grammar Advisor</span>
+          <div className="tool-box" style={{ background: 'rgba(245, 158, 11, 0.15)', border: '1px solid rgba(245, 158, 11, 0.3)', padding: '0.85rem', borderRadius: '14px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.35rem' }}>
+              <SpellCheck size={14} color="#fbbf24" />
+              <span style={{ fontSize: '0.7rem', fontWeight: 800, color: '#fbbf24', textTransform: 'uppercase' }}>Grammar Advisor</span>
             </div>
-            <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#1d1d1f' }}>{grammar.rule}</div>
+            <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#ffffff' }}>{grammar.rule}</div>
           </div>
         )}
       </div>

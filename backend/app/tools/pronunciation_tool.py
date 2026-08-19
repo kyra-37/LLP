@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI PRONUNCIATION TOOL
+LANGUAGE LEARNING PAL PRONUNCIATION TOOL
 
 Purpose:
 - Pronunciation Guidance

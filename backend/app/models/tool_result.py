@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI TOOL RESULT MODEL
+LANGUAGE LEARNING PAL TOOL RESULT MODEL
 Version: 2.0
 
 Purpose:

@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI REFLECTION ENGINE
+LANGUAGE LEARNING PAL REFLECTION ENGINE
 Version: 2.0
 
 Purpose:

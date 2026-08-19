@@ -1,5 +1,5 @@
 .hero-section {
-  padding: 8rem 0 4rem;
+  padding: 4rem 0 3rem;
   width: 100%;
   position: relative;
   overflow: visible;
@@ -11,7 +11,7 @@
   align-items: center;
   text-align: center;
   gap: 1.25rem;
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
 }
 
@@ -19,18 +19,19 @@
   font-size: 4.25rem;
   font-weight: 800;
   letter-spacing: -0.04em;
-  line-height: 1.05;
-  background: linear-gradient(135deg, #0071E3 0%, #6366f1 50%, #d946ef 100%);
+  line-height: 1.08;
+  background: linear-gradient(135deg, #ffffff 0%, #a855f7 50%, #06b6d4 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.35));
 }
 
 .hero-tagline {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: #818cf8;
   letter-spacing: -0.01em;
   margin-bottom: 0.25rem;
 }
@@ -39,7 +40,7 @@
   font-size: 1.15rem;
   color: var(--text-body);
   line-height: 1.6;
-  max-width: 580px;
+  max-width: 620px;
   margin-bottom: 1.5rem;
 }
 
@@ -49,16 +50,17 @@
   display: inline-block;
   padding: 6px;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid var(--color-border);
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
   overflow: hidden;
 }
 
 .cursor-glow-backdrop {
   position: absolute;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(0, 113, 227, 0.15) 0%, rgba(0, 113, 227, 0) 70%);
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, rgba(99, 102, 241, 0) 70%);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -73,12 +75,12 @@
   z-index: 1;
 }
 
-/* Rounded Pill Buttons matching Apple developer aesthetic */
+/* Rounded Pill Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.85rem 2rem;
+  padding: 0.85rem 2.2rem;
   border-radius: 9999px;
   font-family: var(--font-body);
   font-size: 0.95rem;
@@ -90,26 +92,26 @@
 }
 
 .btn-primary {
-  background: var(--color-primary);
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(0, 113, 227, 0.25);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.45);
 }
 
 .btn-primary:hover {
-  background: var(--color-primary-hover);
-  box-shadow: 0 6px 20px rgba(0, 113, 227, 0.35);
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  box-shadow: 0 6px 25px rgba(99, 102, 241, 0.6);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--text-main);
-  border-color: var(--color-border);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
 .btn-secondary:hover {
-  background: #ffffff;
-  border-color: var(--color-border-hover);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
 }
 
 .btn-icon {
@@ -122,7 +124,7 @@
 
 @media (max-width: 991px) {
   .hero-section {
-    padding: 5rem 0 2rem;
+    padding: 3rem 0 2rem;
   }
 }
 
@@ -158,7 +160,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.75rem 1.25rem;
-  max-width: 650px;
+  max-width: 700px;
   margin: 0.5rem auto 1.5rem;
 }
 
@@ -168,19 +170,20 @@
   gap: 0.4rem;
   font-size: 0.9rem;
   font-weight: 550;
-  color: var(--text-body);
-  background: var(--bg-secondary);
-  padding: 0.35rem 0.8rem;
+  color: #cbd5e1;
+  background: rgba(30, 41, 59, 0.6);
+  padding: 0.4rem 0.9rem;
   border-radius: 9999px;
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
   transition: all var(--transition-fast);
 }
 
 .capability-item:hover {
   transform: translateY(-2px);
-  border-color: var(--color-primary);
-  background: var(--color-accent);
-  color: var(--color-primary);
+  border-color: rgba(99, 102, 241, 0.5);
+  background: rgba(99, 102, 241, 0.15);
+  color: #ffffff;
 }
 
 .capability-check {

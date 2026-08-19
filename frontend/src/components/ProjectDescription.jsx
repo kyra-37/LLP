@@ -65,9 +65,9 @@ export default function ProjectDescription() {
     >
       {/* 1. Core Summary Card */}
       <div className="description-card">
-        <h2>What is LingoLift AI?</h2>
+        <h2>What is Language Learning Pal?</h2>
         <p className="description-text">
-          LingoLift AI is an <strong>intelligent, autonomous language-learning partner</strong> built to provide a structured, personalized English training experience. Unlike generic chatbots, LingoLift functions as a true AI Agent by reasoning, utilizing tools, managing memory, and tracking progress.
+          Language Learning Pal is an <strong>intelligent, autonomous language-learning partner</strong> built to provide a structured, personalized English training experience. Unlike generic chatbots, it functions as a true AI agent by reasoning, utilizing tools, managing memory, and tracking progress.
         </p>
       </div>
 
@@ -118,7 +118,7 @@ export default function ProjectDescription() {
                 <tr>
                   <th>Feature Capability</th>
                   <th className="align-center">Traditional Chatbot</th>
-                  <th className="align-center highlight-header">LingoLift AI Agent</th>
+                  <th className="align-center highlight-header">Language Learning Pal Agent</th>
                 </tr>
               </thead>
               <tbody>

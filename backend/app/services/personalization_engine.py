@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI PERSONALIZATION ENGINE
+LANGUAGE LEARNING PAL PERSONALIZATION ENGINE
 
 Purpose:
 * Personalized Learning Experience

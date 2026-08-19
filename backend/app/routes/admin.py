@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI ADMIN ROUTES
+LANGUAGE LEARNING PAL ADMIN ROUTES
 Version: 2.0
 
 Purpose:

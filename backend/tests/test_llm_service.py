@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI LLM SERVICE TEST SUITE
+LANGUAGE LEARNING PAL LLM SERVICE TEST SUITE
 Version: 2.0
 
 Purpose:

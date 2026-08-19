@@ -1,6 +1,6 @@
 """
 ===========================================================
-LINGOLIFT AI SYNONYM TOOL
+LANGUAGE LEARNING PAL SYNONYM TOOL
 
 Purpose:
 - Fetch Synonyms
